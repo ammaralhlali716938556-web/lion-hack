@@ -1,0 +1,22 @@
+- name: Create Project Structure
+      run: |
+        # 1. إنشاء كافة المجلدات المطلوبة أولاً
+        mkdir -p app/src/main/assets
+        mkdir -p app/src/main/java/com/ammar/mikrotik
+        mkdir -p app/src/main/res/layout
+        mkdir -p app/src/main/res/values
+
+        # 2. بعد ذلك يمكنك كتابة محتوى ملف MainActivity.java بدون أي خطأ
+        cat << 'EOF' > app/src/main/java/com/ammar/mikrotik/MainActivity.java
+        package com.ammar.mikrotik;
+
+        import androidx.appcompat.app.AppCompatActivity;
+        import android.os.Bundle;
+
+        public class MainActivity extends AppCompatActivity {
+            @Override
+            protected void onCreate(Bundle savedInstanceState) {
+                super.onCreate(savedInstanceState);
+            }
+        }
+        EOF
